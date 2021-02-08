@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.1 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkTextBuffer" id="text_buffer_1">
+    <property name="text" translatable="yes">Горные вершины
+Спят во тьме ночной;
+Тихие долины
+Полны свежей мглой;
+Не пылит дорога,
+Не дрожат листы...
+Подожди немного,
+Отдохнёшь и ты.</property>
+  </object>
+  <object class="GtkTextBuffer" id="text_buffer_2">
+    <property name="text" translatable="yes">сюда будет передан текст</property>
+  </object>
+  <object class="GtkWindow" id="main_window">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkGrid" id="main_grid">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="row_spacing">10</property>
+        <property name="column_spacing">5</property>
+        <child>
+          <object class="GtkButton" id="but_start">
+            <property name="label" translatable="yes">button</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="left_attach">0</property>
+            <property name="top_attach">1</property>
+            <property name="width">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkTextView" id="text_view_input">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="margin_right">12</property>
+            <property name="margin_bottom">5</property>
+            <property name="left_margin">5</property>
+            <property name="right_margin">5</property>
+            <property name="top_margin">5</property>
+            <property name="bottom_margin">5</property>
+            <property name="buffer">text_buffer_1</property>
+          </object>
+          <packing>
+            <property name="left_attach">0</property>
+            <property name="top_attach">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkTextView" id="text_view_output">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="margin_right">154</property>
+            <property name="editable">False</property>
+            <property name="left_margin">5</property>
+            <property name="right_margin">5</property>
+            <property name="top_margin">5</property>
+            <property name="bottom_margin">5</property>
+            <property name="buffer">text_buffer_2</property>
+          </object>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="top_attach">0</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
